@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="icon" type="image/png" href="https://static-01.daraz.pk/p/9a12eda62e7b965fd871ba6af08ad06e.jpg">
+
+  <title>Discover Pakistan</title>
+  <style>
+    /* Base Styles */
+    body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f9f9f9; color: #01411C; scroll-behavior: smooth; overflow-x: hidden; }
+    
+    /* Header Animation */
+    header { background: #01411C; color: #fff; padding: 25px 15px; text-align: center; border-bottom: 4px solid #C9A24D; }
+    header h1 { 
+      transition: all 0.4s ease; 
+      display: inline-block; 
+      cursor: default;
+    }
+    header h1:hover {
+      text-shadow: 0 0 15px rgba(201, 162, 77, 0.8);
+      transform: scale(1.05);
+    }
+
+    nav { margin-top: 15px; }
+    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+    nav a:hover { color: #C9A24D; }
+
+    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+
+    /* --- HEADING HOVER ANIMATIONS --- */
+    .center-heading { text-align: center; }
+    h2 { 
+      color: #01411C; 
+      text-align: center; 
+      margin-bottom: 30px; 
+      border-bottom: 2px solid #C9A24D; 
+      display: inline-block; 
+      padding-bottom: 5px;
+      transition: all 0.4s ease-in-out;
+      cursor: pointer;
+      letter-spacing: normal;
+    }
+
+    h2:hover { 
+      color: #C9A24D;
+      letter-spacing: 3px; 
+      border-bottom-color: #01411C;
+      transform: translateY(-5px);
+    }
+
+    /* Scroll Animation Base */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Card Hover Animations */
+    .card-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    
+    .card { 
+      background: white;
+      border-radius: 12px; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+      overflow: hidden; 
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover { 
+      transform: translateY(-10px) scale(1.02); 
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2); 
+    }
+
+    .card img { width: 100%; height: 200px; object-fit: cover; transition: transform 0.5s ease; }
+    .card:hover img { transform: scale(1.1); }
+
+    .card div { padding: 20px; }
+    .gold { color: #C9A24D; font-weight: bold; }
+
+    /* --- ADDED GALLERY FIELD ANIMATIONS --- */
+    form { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+    
+    .field-wrapper {
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active .field-wrapper {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    input, textarea { 
+      width: 100%; padding: 12px; margin: 10px 0; border: 2px solid #ddd; border-radius: 5px; 
+      box-sizing: border-box; outline: none; transition: all 0.3s ease; 
+    }
+
+    input:hover, textarea:hover {
+      border-color: #C9A24D;
+    }
+
+    input:focus, textarea:focus { 
+      border-color: #01411C; 
+      box-shadow: 0 0 8px rgba(1, 65, 28, 0.2);
+      transform: scale(1.01);
+      background-color: #fffef9;
+    }
+
+    button { 
+      background-color: #01411C; color: white; border: none; cursor: pointer; font-weight: bold; 
+      transition: background-color 0.3s ease, transform 0.2s ease; padding: 12px; border-radius: 5px; width: 100%;
+    }
+
+    button:hover { background-color: #C9A24D; transform: scale(1.02); }
+
+    /* Map Section */
+    .map-container { width: 100%; overflow: hidden; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+    iframe { width: 100%; height: 450px; border: 0; }
+
+    footer { background: #01411C; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
+    
+    @media(max-width: 600px){ nav a { display: block; margin: 10px 0; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Discover Pakistan</h1>
+  <p class="gold">Explore Culture, Nature & Heritage</p>
+  <nav>
+    <a href="#destinations">Destinations</a>
+    <a href="#culture">Culture</a>
+    <a href="#tips">Travel Tips</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#map">Map</a>
+  </nav>
+</header>
+
+<section id="destinations" class="reveal">
+  <div class="center-heading"><h2>Top Destinations</h2></div>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0eBlveN6voBU7AaExaAop0jdh2TkXl5AOvg&s" alt="Hunza">
+      <div><h3>Hunza Valley</h3><p>Famous for majestic peaks and the historic Baltit Fort.</p></div>
+    </div>
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBfdGHUll1v4RZvDwrAz0ghWFWHG32YmL1Dw&s" alt="Lahore">
+      <div><h3>Lahore Fort</h3><p>A masterpiece of Mughal architecture and UNESCO site.</p></div>
+    </div>
+    <div class="card">
+      <img src="https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/6826541bc1d850001d0531d6.jpg" alt="Swat">
+      <div><h3>Swat Valley</h3><p>Known for its lush green meadows and alpine lakes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="culture" class="reveal" style="background: #f1f1f1; width: 100%; max-width: none;">
+  <div style="max-width: 1200px; margin: auto; text-align: center;">
+    <div class="center-heading"><h2>Cultural Insights</h2></div>
+    <p>Pakistan is a melting pot of diverse traditions. From the vibrant <strong>Basant</strong> festival to the high-altitude <strong>Shandur Polo Festival</strong>, the spirit is unmatched. Savor the spice of Biryani or the traditional aroma of Chapli Kebab.</p>
+  </div>
+</section>
+
+<section id="tips" class="reveal">
+  <div class="center-heading"><h2>Travel Tips</h2></div>
+  <ul style="line-height: 1.8; font-size: 1.1em; list-style-type: none; text-align: center; padding: 0;">
+    <li>📍 <strong>Transport:</strong> Use <em>Bykea</em> or <em>Uber/InDrive</em> in major cities.</li>
+    <li>🏔️ <strong>Peak Season:</strong> Visit the North between May and September.</li>
+    <li>🤝 <strong>Hospitality:</strong> Expect warmth; Pakistanis are world-renowned for their hospitality!</li>
+  </ul>
+</section>
+
+<section id="gallery" class="reveal">
+  <div class="center-heading"><h2>User Gallery</h2></div>
+  <form id="galleryForm">
+    <div class="field-wrapper" style="transition-delay: 0.1s;"><input type="text" placeholder="Your Name" required></div>
+    <div class="field-wrapper" style="transition-delay: 0.2s;"><input type="email" placeholder="Email" required></div>
+    <div class="field-wrapper" style="transition-delay: 0.3s;"><input type="file" accept="image/*" required></div>
+    <div class="field-wrapper" style="transition-delay: 0.4s;"><textarea placeholder="Your Travel Story" rows="4"></textarea></div>
+    <div class="field-wrapper" style="transition-delay: 0.5s;"><button type="submit">Share Story</button></div>
+  </form>
+</section>
+
+<section id="map" class="reveal">
+  <div class="center-heading"><h2>Explore the Map</h2></div>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13606.064560410756!2d74.3023612!3d31.5891666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191b7e0766324d%3A0x6a94f1388b394e3a!2sLahore%20Fort!5e0!3m2!1sen!2spk!4v1700000000000!5m2!1sen!2spk" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Discover Pakistan | Tourism Website Project by Shakir Ahmed</p>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  document.getElementById('galleryForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('Thank you for sharing your experience with us!');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
